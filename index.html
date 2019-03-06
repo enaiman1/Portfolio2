@@ -1,161 +1,317 @@
-<!DOCTYPE <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- link to tailwind -->
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-    <!-- link to css reset -->
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css" />
-    <!-- link to css -->
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- linking font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- devicon -->
+  <link rel="stylesheet"
+    href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <!-- link to aos.css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- w3 css framework -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- linking reset -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <!-- linking css -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>Eric Naiman</title>
 </head>
 
-
 <body>
-<!-- navbar -->
-<nav class="flex items-center justify-between flex-wrap bg-blue p-6">
-    <div class="flex items-center flex-no-shrink text-white mr-6">
-      <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
-      <span class="font-semibold text-xl tracking-tight">Eric Naiman</span>
-    </div>
-    <div class="block lg:hidden">
-      <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-      </button>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div class="text-sm lg:flex-grow">
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-          Top
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-          About
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white">
-          My Work
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white">
-            Let's Connect
-            </a>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-card nav">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-indigo"><b>Eric Naiman</b></a>
+      <div class="w3-right">
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-indigo">About</a>
+        <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-indigo">Projects</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-indigo">Contact</a>
       </div>
     </div>
-  </nav>
+  </div>
 
-       <!-- main header with title -->
-    <header class="container" id="masthead">
-        <div class="">
-            <div class="">
-                <h1>Eric <b>Naiman</b></h1>
-                <h2> Full stack Web Developer</h2>
-                <!-- <p<i></i></p> -->
-            </div>
-        </div>
-    </header>
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-indigo" onclick="myFunction()">About</a>
+    <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-indigo" onclick="myFunction()">Projects</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-indigo" onclick="myFunction()">Contact</a>
+  </div>
 
 
-    <!-- about section -->
-    <section class="container" id="about">
-        <div class="">
-            <h2>Bio?</h2>
-        </div>
-        <div class="">
-            <div></div>
-                <h4>Who am I</h4>
-                <p>
-                    A customer centric,  full stack web development, with an accomplished food & beverage management background.  
-                    I have a passion for integrating emerging technologies to help take on new challenge to achieve personal and professional goals. 
-                    I have expertise in analyzing, developing & implementing policies to drive organization toward higher achievements. Results oriented strategist & visionary with demonstrated success in leading teams. 
-                    Comprehensive knowledge of management, organizational development, team building, and project execution. 
-                    
-                </p>
-                <h4>Why web development</h4>
-                <p>
-                    I think the programming bug bit me when I was given the opportunity to learn how to make video games at my local library. 
-                    Since taking that class and turning a hobby into a career has aloud me to tap into my creative and artistic side. Im continuesly thinking 
-                    and learning new way to make the user experience sleek, capitivating and while maintaining or improving the efficiency of the program
-                </p>
-            </div>
-            <div class="">
-                <h4>Here are my skills</h4>
-                <p>
-                    <b>JAVASCRIPT</b>,
-                    <b>NODE</b>,
-                    <b>HTML</b>,
-                    <b>CSS</b>,
-                    <b>JQUERY</b>,
-                    <b>BOOTSTRAP</b>, 
-                    <b>Tailwind</b>,
-                    <b>PHP</b>
-                </p>
-                <p>Please check out some of my work below?</p>
-            </div>
-        </div>
-    </section>
-      
-    <!-- My work section -->
-    <section class="container" id="work section">
-    <h2>My Work</h2>
-    <!-- GifTastic and Crystal Collector -->
-    <div class="flex mb-4">
-<!-- Gif Tastic -->
-        <div class="w-1/2 h-12">
-            <a href="https://enaiman1.github.io/GifTastic/" target="_blank">
-                <img class="" src="./assets/images/curtains.jpg" alt="Movie meme app" width="250px" height="200px">
-            </a>
-        </div>
-        <!-- cyrstal collector -->
-        <div class="w-1/2  h-12">
-            <a href="https://enaiman1.github.io/unit-4-game/" target="_blank">
-                <img class="" src="./assets/images/cave.jpg" alt="Movie meme app" width="250px" height="200px">
-            </a>
-        </div>
+  <!-- Header -->
+  <header class="showcase">
+    <div class="content">
+      <img src="./assets/media/logoWhite_shadow .png" class="logo" alt="Eric Naiman logo">
+      <div class="title">
+        <h1>Eric Naiman</h1>
+    
       </div>
+      <div class="text">
+       <p> Creator of websites & apps, fitness enthusiast, culinarian, imagineer, & director everything else that's
+        great!</p>
+      </div>
+    </div>
+  </header>
 
-<!-- trivia and psychic game -->
 
-<div class="flex mb-4 mt-4">
-    <!-- trivia game -->
-        <div class="w-1/2 h-12">
-            <a href="https://enaiman1.github.io/TriviaGame/" target="_blank">
-                <img class="" src="./assets/images/pubTrivia.jpg" alt="Movie meme app" width="250px" height="200px">
-            </a>
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center"  data-aos="flip-down">About</h2>
+    <div class="w3-row">
+      <!-- image -->
+      <div class="w3-col m4 l3" data-aos="fade-right" data-aos-duration="5000" data-aos-delay="200">
+        <img src="./assets/media/bioPic.JPG" class="logo" alt="Eric Naiman logo" width="200">
+      </div>
+      <div class="w3-col m8 l9" data-aos="fade-up-left" data-aos-duration="3000">
+        <h3>Who am I ?</h3>
+        <p>
+        I am  a customer centric, full stack web developer, with an accomplished food & beverage management background. I have a passion for integrating emerging technologies to help my clients take on new challenges to achieve their personal and professional goals. I have expertise in analyzing, developing and implementing policies to drive an organization towards higher levels of achievement. Working with me, you are employing a results oriented strategist and visionary, with demonstrated success in leading teams. I bring a comprehensive knowledge of management, organizational development, team building, and project execution.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- technologies used section -->
+  <div class="w3-container w3-padding-32 " id="technologies">
+    <h2 class="w3-border-bottom w3-border-black w3-padding-16 w3-center"  data-aos="flip-down">Technologies Used</h2>
+    <div class="w3-row">
+      <!-- html icon -->
+      <div class="w3-col m1 w3-center">
+        <i class="devicon-html5-plain-wordmark colored fa-4x"></i>
+      </div>
+      <!-- css icon -->
+      <div class="w3-col m1 w3-center">
+        <i class="devicon-css3-plain-wordmark colored fa-4x"></i>
+      </div>
+      <!-- bootstrap icon -->
+      <div class="w3-col m1 w3-center">
+        <i class="devicon-bootstrap-plain-wordmark colored fa-4x"></i>
+      </div>
+      <!-- wordpress -->
+      <div class="w3-col m1 w3-center">
+        <i class="devicon-wordpress-plain-wordmark colored fa-4x"></i>
+      </div>
+      <!-- javascript icon -->
+      <div class="w3-col m1 w3-center">
+        <i class="devicon-javascript-plain colored fa-4x"></i>
+      </div>
+      <!-- jquery icon -->
+      <div class="w3-col m1 w3-center">
+        <i class="devicon-jquery-plain-wordmark colored fa-4x"></i>
+      </div>
+      <!-- node icon -->
+      <div class="w3-col m1 w3-center ">
+        <i class="devicon-nodejs-plain-wordmark colored fa-4x"></i>
+      </div>
+      <!-- express icon -->
+      <div class="w3-col m1 w3-center ">
+        <i class="devicon-express-original colored fa-4x"></i>
+      </div>
+      <!-- PHP icon -->
+      <div class="w3-col m1 w3-center ">
+        <i class="devicon-php-plain colored fa-4x"></i>
+      </div>
+      <!-- mysql icon -->
+      <div class="w3-col m1 w3-center ">
+        <i class="devicon-mysql-plain-wordmark colored fa-4x"></i>
+      </div>
+      <!-- Heroku icon -->
+      <div class="w3-col m1 w3-center ">
+        <i class="devicon-heroku-plain-wordmark colored fa-4x"></i>
+      </div>
+      <!-- GitHub icon -->
+      <div class="w3-col m1 w3-center ">
+        <i class="devicon-github-plain-wordmark colored fa-4x"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-64" id="projects">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center" data-aos="flip-down">Projects</h2>
+  
+  <!-- 1st row -->
+  <div class="w3-row-padding w3-padding-48">
+    <!-- Gif Tastic -->
+    <div class="w3-col l3 m6 w3-margin-bottom" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <h4>Giftastic</h4>
         </div>
-        <!-- psychic game -->
-        <div class="w-1/2  h-12 mt-4">
-            <a href="https://enaiman1.github.io/Psychic-Game/" target="_blank">
-                <img class="" src="./assets/images/geometry.jpg" alt="Movie meme app" width="250px" height="200px">
-            </a>
+        <a href="https://enaiman1.github.io/GifTastic/" target="_blank">
+          <img src="./assets/media/curtains.jpg" alt="Giftastic app" style="width:100%">
+        </a>
+      </div>
+    </div>
+    <!-- Crystal Collectors -->
+    <div class="w3-col l3 m6 w3-margin-bottom"data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <h4>Crystal Collectors</h4>
         </div>
+        <a href="https://enaiman1.github.io/Crystal-Collector/" target="_blank">
+          <img src="./assets/media/cave.jpg" alt="Crystal Collectors app" style="width:100%">
+        </a>
+      </div>
     </div>
 
-    <!-- typing test and train scheduler -->
+    <!-- pub trivia -->
+    <div class="w3-col l3 m6 w3-margin-bottom"data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <h4>Trivia Game</h4>
+        </div>
+        <a href="https://enaiman1.github.io/TriviaGame/" target="_blank">
+          <img src="./assets/media/pubTrivia.jpg" alt="Trivia Game" style="width:100%">
+        </a>
+      </div>
+    </div>
+    <!-- Psychic Game -->
+    <div class="w3-col l3 m6 w3-margin-bottom"data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <h4>Psychic Game</h4>
+        </div>
+        <a href="https://enaiman1.github.io/Psychic-Game/" target="_blank">
+          <img src="./assets/media/crystalBall.jpg" alt="Psychic Game" style="width:100%">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- 2nd row -->
+  <div class="w3-row-padding" >
+<!-- typing Test -->
+    <div class="w3-col l3 m6 w3-margin-bottom"data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <h4>Typing Test</h4>
+        </div>
+        <a href="https://enaiman1.github.io/TypingTest/" target="_blank">
+          <img src="./assets/media/typeTest.jpg" alt="Typing Test App" style="width:99%">
+        </a>
+      </div>
+    </div>
+    <!-- train Scheduler -->
+    <div class="w3-col l3 m6 w3-margin-bottom" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <h4>Train Scheduler</h4>
+        </div>
+        <a href="https://enaiman1.github.io/trainSchedule/" target="_blank">
+          <img src="./assets/media/tracks.jpg" alt="House" style="width:99%">
+        </a>
+      </div>
+    </div>
 
-    <div class="flex mb-4 mt-4">
-            <!-- typing test -->
-                <div class="w-1/2 h-12 mt-4">
-                    <a href="https://enaiman1.github.io/TypingTest/" target="_blank">
-                        <img class="" src="./assets/images/typeTest.png" alt="Movie meme app" width="250px" height="200px">
-                    </a>
-                </div>
-                <!-- train scheduler -->
-                <div class="w-1/2  h-12 mt-4">
-                    <a href="https://enaiman1.github.io/trainSchedule/" target="_blank">
-                        <img class="" src="./assets/images/tracks.jpg" alt="Movie meme app" width="250px" height="200px">
-                    </a>
-                </div>
+    <!-- friend finder -->
+    <div class="w3-col l3 m6 w3-margin-bottom"data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <h4>Friend Finder</h4>
+        </div>
+        <a href="https://arcane-bayou-15353.herokuapp.com/" target="_blank">
+          <img src="./assets/media/friends.jpg" alt="Safely App" style="width:99%">
+        </a>
+      </div>
+    </div>
+
+    <!--safely  -->
+    <div class="w3-col l3 m6 w3-margin-bottom"data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">
+          <h4>Safely</h4>
+        </div>
+        <a href="https://soc33.github.io/Safely/" target="_blank">
+          <img src="./assets/media/dove.jpg" alt="Safely App" style="width:99%">
+        </a>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h2 class="w3-border-bottom w3-border-black w3-padding-16 w3-center" data-aos="flip-down">Contact</h2>
+    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Orlando, US<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: enaiman1@gmail.com<br>
+        <a href="https://github.com/enaiman1" target="_blank">
+          <i class="fab fa-github" style="width:30px"></i>GitHub<br>
+        </a>
+        <a href="https://www.linkedin.com/in/enaiman1" target="_blank">
+          <i class="fa fa-linkedin w3-hover-opacity" style="width:30px"></i>LinkedIn
+        </a>
+      </div>
+
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
             </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
+    <!-- Github -->
+    <a href="https://github.com/enaiman1" target="_blank">
+      <i class="fab fa-github fa-2x"></i>
+    </a>
+    <!-- linked in -->
+    <a href="https://www.linkedin.com/in/enaiman1" target="_blank">
+      <i class="fa fa-linkedin w3-hover-opacity fa-2x"></i>
+    </a>
+    <!-- instagram link -->
+    <a href="https://www.instagram.com/ericcentrik/" target="_blank">
+      <i class="fa fa-instagram w3-hover-opacity fa-2x"></i>
+    </a>
+    <!-- twitter -->
+    <a href="https://twitter.com/Ericcentrik" target="_blank">
+      <i class="fa fa-twitter w3-hover-opacity fa-2x"></i>
+    </a>
+    <p class="w3-medium">© Eric Naiman 2019. All Rights Reserved.</p>
+  </footer>
 
 
-</section>
 
 
 
-<!-- link to jquery -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!-- link to main javascript-->
-        <script src="./assets/js/script.js"></script>
+
 </body>
+<!-- link to aos.css javascript file -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- Linking jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- linking javascript -->
+<script src="./assets/javascript/script.js"></script>
+
+<script>
+  AOS.init();
+</script>
+
 </html>

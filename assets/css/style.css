@@ -1,0 +1,145 @@
+body,
+.nav {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+
+/* background of header */
+.showcase::after{
+    content:"";
+    height: 100vh;
+    widows: 100%;
+    background-image: url(../media/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+    background-color: #2f384f
+}
+.showcase:hover::after{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.showcase:hover .content{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+/* logo */
+.content {
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    transition: all 1000ms;
+}
+.content .logo {
+height: 280px;
+width: 289px;
+}
+
+.content .title{
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    color: #f4f4f4;
+
+}
+
+.content .text {
+line-height: 1.7; 
+margin-top: 1rem;
+color: #f4f4f4;
+}
+
+/* about section */
+#about{
+    height: 85vh;
+    background-color: #2f384f; 
+    color: #f4f4f4;
+    -webkit-clip-path: polygon(79% 100%, 100% 51%, 100% 0, 0 0, 0 64%);
+    clip-path: polygon(79% 100%, 100% 51%, 100% 0, 0 0, 0 64%);
+}
+
+#technologies {
+    height: 40vh;
+}
+
+#projects {
+    height: vh;
+    background-color: #2f384f; 
+    color: #f4f4f4;
+   padding: 10px auto;
+   -webkit-clip-path: polygon(25% 0, 100% 21%, 100% 100%, 0 100%, 0 22%);
+   clip-path: polygon(25% 0, 100% 21%, 100% 100%, 0 100%, 0 22%);
+   padding: 10px auto;
+}
+
+
+
+footer{
+    color: #f4f4f4;
+    background-color: #2f384f;
+
+}
+
+
+
+img {
+    border-radius: 10px;
+}
+
+/* small screen */
+@media(max-width:570px) {
+
+    .showcase::after{
+        height: 50vh;
+    }
+    
+    .content{
+        top: 10%;
+        margin-top: 5px;
+    }
+    
+    .content .log{
+        height: 140px;
+        width: 140px;
+    }
+    .content .text {
+        display: none;
+    }
+
+    #about {
+        height: 1200px;
+        -webkit-clip-path: polygon(74% 85%, 100% 60%, 100% 0, 0 0, 0 69%);
+        clip-path: polygon(74% 85%, 100% 60%, 100% 0, 0 0, 0 69%);    
+ }
+    #project {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+}
+        @media(max-height: 500px){
+    .content .title,
+    .content .text{
+        display: none;
+    }
+    
+    .content {
+        top: 0;
+    }
+
+    #about{
+        height:600px;
+    }
+    
+}

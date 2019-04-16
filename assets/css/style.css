@@ -63,11 +63,15 @@ color: #f4f4f4;
 
 /* about section */
 #about{
-    height: 85vh;
+    height: 60vh;
     background-color: #2f384f; 
     color: #f4f4f4;
-    -webkit-clip-path: polygon(79% 100%, 100% 51%, 100% 0, 0 0, 0 64%);
-    clip-path: polygon(79% 100%, 100% 51%, 100% 0, 0 0, 0 64%);
+    /* -webkit-clip-path: polygon(79% 100%, 100% 51%, 100% 0, 0 0, 0 64%);
+    clip-path: polygon(79% 100%, 100% 51%, 100% 0, 0 0, 0 64%); */
+    /* -webkit-clip-path: polygon(68% 77%, 100% 47%, 100% 0, 0 0, 0 57%);
+clip-path: polygon(68% 77%, 100% 47%, 100% 0, 0 0, 0 57%); */
+-webkit-clip-path: polygon(71% 100%, 100% 72%, 100% 0, 0 0, 0 78%);
+clip-path: polygon(71% 100%, 100% 72%, 100% 0, 0 0, 0 78%);
 }
 
 #technologies {
@@ -102,7 +106,7 @@ img {
 @media(max-width:570px) {
 
     .showcase::after{
-        height: 50vh;
+        height: 60vh;
     }
     
     .content{
@@ -114,7 +118,8 @@ img {
         height: 140px;
         width: 140px;
     }
-    .content .text {
+    .content .text,
+    .title {
         display: none;
     }
 
